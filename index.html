@@ -12,29 +12,36 @@
                 font-family: sans-serif;
             }
 
-            #flex-container {
-                display: flex;
-                justify-content: center;
-                margin-top: 50px;
-            }
-
             h1 {
                 margin: 0;
             }
 
-            #top-box {
-                border-top: 5px solid #f29a12;
-                background-color: #666666;
-                height: 32px;
+
+            #flex-box {
+                display: flex;
+                justify-content: center;
             }
 
-            #main-box {
+            #msg-box-wrapper {
+                top: 50%;
+                position: absolute;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            #msg-box-top {
+                border-top: 5px solid #f29a12;
+                height: 32px;
+                background-color: #666666;
+            }
+
+            #msg-box-main {
                 border: solid #f29a12;
-                border-width: 0 1px 0 1px;
+                border-width: 0 1px;
                 padding: 3%;
             }
 
-            #bottom-box {
+            #msg-box-bottom {
                 border-bottom: 5px solid #f29a12;
             }
         </style>
@@ -42,17 +49,17 @@
 
 
     <body>
-        <div id="flex-container">
-            <div>
-                <div id="top-box">&nbsp;</div>
+        <div id="flex-box">
+            <div id="msg-box-wrapper">
+                <div id="msg-box-top">&nbsp;</div>
                 
-                <div id="main-box">
+                <div id="msg-box-main">
                     <h1>Error-Code 500</h1>
                     <p>Our server has a problem handling your request.</p>
                     <p>Please try again in a few minutes.</p>
                 </div>
 
-                <div id="bottom-box"></div>
+                <div id="msg-box-bottom"></div>
             </div>
         </div>
     </body>
